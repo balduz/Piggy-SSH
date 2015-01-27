@@ -1,0 +1,2 @@
+# Piggy-SSH
+Piggy SSH is a plugin for Sublime Text 3 that allows an Apache Pig developer to run a script against a cluster by sending the script through SSH. All the logs and the output generated are printed to the ST3 console. To avoid sending too many requests by accident to a cluster, it is currently limited to one only job at a time. Any attempt to send a second job will show the user a dialog asking wether he wants to cancel the previous job in order to send the new one.
