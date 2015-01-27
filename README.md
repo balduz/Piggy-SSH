@@ -38,3 +38,8 @@ There are two different ways to execute PiggySsh, one of them is to send the who
 However, if you only want to run a portion of your code, you can do so by selecting the code you want to run and pressing `Control + Shift + .`. If you attempt to run two or more scripts at the same time, a dialog will be displayed warning you that only one can be run at the same time, so you can either cancel the previous job and run the new one, or continue running the first one.
 
 If you wish to cancel the job you are running, press `Control + Shift + -`. When cancelling a job, PiggySsh will send a `SIGINT` to the process (simulating a `Control + C`), so that Pig kills the submitted job before the process is killed.
+
+#### Attribution 
+The syntax highlighting used in the first screenshot (and a great asset for any Pig developer) is from the Apache Pig Sublime Text plugin:
+
+https://github.com/chrislongo/Pig
