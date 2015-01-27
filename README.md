@@ -16,9 +16,25 @@ To connect via SSH, this plugin needs the Python library paramiko, which also re
 
 Now, you should have the following structure:
 
-1. a
-2. b
-c
-d
-e
+```
+\Packages
+-- \PiggySsh
+-- \Crypto
+-- \ecdsa
+-- \paramiko
+-- \...
+```
 
+#### Settings
+You need to modify the piggy_ssh.sublime-settings file, which is a JSON file containing the details to perform the SSH connection: hostname, username and password.
+
+![PiggySsh settings](http://balduz.github.io/settings.PNG)
+
+As for the key bindings, you can modify them at any time by editing the `.sublime-keymap` file that corresponds to your operating system.
+
+#### Usage
+There are two different ways to execute PiggySsh, one of them is to send the whole script you are working on to your cluster. To do this, press `Control + Shift + ,` and the console will be displayed so you can check the status. Since it runs on a different thread, you can hide the console and continue working.
+
+However, if you only want to run a portion of your code, you can do so by selecting the code you want to run and pressing `Control + Shift + .`. If you attempt to run two or more scripts at the same time, a dialog will be displayed warning you that only one can be run at the same time, so you can either cancel the previous job and run the new one, or continue running the first one.
+
+If you wish to cancel the job you are running, press `Control + Shift + -`. When cancelling a job, PiggySsh will send a `SIGINT` to the process (simulating a `Control + C`), so that Pig kills the submitted job before the process is killed.
