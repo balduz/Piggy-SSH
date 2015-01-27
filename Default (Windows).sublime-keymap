@@ -1,0 +1,5 @@
+[
+	{ "keys": ["ctrl+shift+,"], "command": "piggy_ssh_script" },
+	{ "keys": ["ctrl+shift+."], "command": "piggy_ssh_selection" },
+	{ "keys": ["ctrl+shift+-"], "command": "cancel_job" }
+]
